@@ -20,12 +20,12 @@
 <div class="bg">
 <div class="login-box">
   <div class="login-logo">
-    <a href="{{url('/adminLTE/index2.html')}}"><b>LOGIN</b> ADMIN</a>
+    <a href="{{url('/adminLTE/index2.html')}}"><b>LOGIN</b> Petugas Keluar</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Halaman Login Parkir ADMIN MALL</p>
+      <p class="login-box-msg">Halaman Login Petugas Keluar</p>
 
       <form action="/loginAdmin" method="post">
       @csrf

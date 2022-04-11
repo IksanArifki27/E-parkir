@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redis;
+use Symfony\Component\CssSelector\Node\FunctionNode;
 
 class AdminController extends Controller
 {
@@ -21,6 +22,10 @@ class AdminController extends Controller
             return redirect('/admin');
         }
         return redirect('/login');
+        // dd($request->all());
     }
-
+    public Function logout(){
+        Auth::logout();
+        return redirect('/login');
+    }
 }

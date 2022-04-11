@@ -16,18 +16,27 @@ use App\Http\Controllers\petugasMasukController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function(){
+    return view('warning');
+});
 
 // halaman admin
-Route::get('/admin',[AdminController::class,'halamanAdmin'])->name('halamanAdmin');
-Route::get('/login', [AdminController::class,'halamanLogin'])->name('halamanLogin');
+
+Route::get('/admin',[AdminController::class,'halamanAdmin']);
+Route::get('/login', [AdminController::class,'halamanLogin'])->name('login');
 Route::post('/loginAdmin',[AdminController::class,'postLogin'])->name('postLogin');
+Route::get('/logout',[AdminController::class,'logout'])->name('logout');
+
+Route::group(['middleware'=>['auth']],function(){
+    Route::get('/admin',[AdminController::class,'halamanAdmin']);
+});
 
 // halaman petugas masuk
-Route::get('/petugasMasuk',);
+Route::get('/petugasMasuk',[petugasMasukController::class,'pageHome'])->name('pageHome');
 Route::get('/loginPetugasMasuk',[petugasMasukController::class,'pageLoginPetugasM']);
-Route::post('/loginPetugasMasuk',);
+Route::post('/loginPetugasMasuk',[petugasMasukController::class,'postLogin'])->name('postLogin');
 
 // halamn petugas Keluar
-Route::get('/petugasKeluar',);
+Route::get('/petugasKeluar',[petugasKeluarController::class,'pageHome']);
 Route::get('/loginPetugasKeluar',[petugasKeluarController::class,'pageLoginPetugask']);
-Route::post('/loginPetugasKeluar',);
+Route::post('/loginPetugasKeluar',[petugasKeluarController::class,'postLogin']);

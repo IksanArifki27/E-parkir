@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Halaman login admin</title>
+  <title>{{$title}} </title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -20,14 +20,14 @@
 <div class="bg">
 <div class="login-box">
   <div class="login-logo">
-    <a href="{{url('/adminLTE/index2.html')}}"><b>LOGIN</b> Petugas Masuk</a>
+    <a href="{{url('/adminLTE/index2.html')}}"><b>LOGIN</b> {{$judulLogin}}</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Halaman Login Petugas Masuk</p>
+      <p class="login-box-msg">Halaman Login {{$judulLogin}}</p>
 
-      <form action="/loginAdmin" method="post">
+      <form action="/loginPetugasMasuk" method="post">
       @csrf
         <div class="input-group mb-3">
           <input type="text" class="form-control" name="email" placeholder="masukan username">

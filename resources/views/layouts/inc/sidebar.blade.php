@@ -46,6 +46,12 @@
               <p>Dashboard</p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="/logout" class="nav-link">
+              <i class="fa fa-flag"></i>
+              <p>Logout</p>
+            </a>
+          </li>
           
         </ul>
       </nav>

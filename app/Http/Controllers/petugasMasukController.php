@@ -22,4 +22,8 @@ class petugasMasukController extends Controller
         }
         return redirect('/loginPetugasMasuk');
     }
+    public function logout(){
+        Auth::logout();
+        return redirect('/loginPetugasMasuk');
+    }
 }

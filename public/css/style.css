@@ -1,1 +1,5 @@
-
+body {
+    background-image: url("/img/parkir_mall.jpg");
+    background-size: cover;
+    filter: opacity(0.9);
+}

@@ -5,7 +5,7 @@
           <img src="/img/logo untag.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="/admin" class="d-block">Iksan arifki</a>
+          <a href="/admin" class="d-block">Dashbor Admin</a>
         </div>
       </div>
 
@@ -15,9 +15,9 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="header bg-primary">Master</li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>Dashboard</p>
+            <a href="/laporanP" class="nav-link">
+              <i class="fa fa-car""></i>
+              <p>Record</p>
             </a>
           </li>
           
@@ -46,9 +46,10 @@
               <p>Dashboard</p>
             </a>
           </li>
+          <br><br>
           <li class="nav-item">
             <a href="/logout" class="nav-link">
-              <i class="fa fa-flag"></i>
+              <i class="fa fa-sign"></i>
               <p>Logout</p>
             </a>
           </li>

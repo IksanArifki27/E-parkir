@@ -19,9 +19,7 @@
 <body class="hold-transition login-page">
 <div class="bg">
 <div class="login-box">
-  <div class="login-logo">
-    <a href="{{url('/adminLTE/index2.html')}}"><b>LOGIN</b> {{$judulLogin}}</a>
-  </div>
+    <h2 class="text-light text-center">{{$judulLogin}}</h2>
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">

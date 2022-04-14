@@ -28,6 +28,6 @@ class petugasKeluarController extends Controller
     }
     public Function logout(){
         Auth::logout();
-        return redirect('/login');
+        return redirect('/loginPetugasKeluar');
     }
 }

@@ -19,16 +19,16 @@
 <body class="hold-transition login-page">
 <div class="bg">
 <div class="login-box">
-  <h2 class="text-light text-center">LOGIN <b> ADMIN</b></h2>
+  <h2 class="text-light text-center">LOGIN <b>HERE</b></h2>
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Halaman Login Parkir ADMIN MALL</p>
+      <p class="login-box-msg">Halaman Login Parkir MALL</p>
 
       <form action="/loginAdmin" method="post">
       @csrf
         <div class="input-group mb-3">
-          <input type="text" class="form-control" name="email" placeholder="masukan username">
+          <input type="text" class="form-control" name="email" id="email" placeholder="masukan username">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -36,7 +36,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" name="password" placeholder="masukan password">
+          <input type="password" class="form-control" name="password" ="password" placeholder="masukan password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>

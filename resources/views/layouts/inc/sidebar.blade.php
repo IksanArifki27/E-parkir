@@ -13,43 +13,39 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="header bg-primary">Master</li>
+          <li class="header bg-primary text-center">Master</li>
           <li class="nav-item">
             <a href="/laporanP" class="nav-link">
-              <i class="fa fa-car""></i>
-              <p>Record</p>
+              <i class="fa fa-car"></i>
+              <p>Record Kendaraan</p>
+            </a>
+          </li>
+          <br>
+          <li class="header bg-primary text-center">Petugas</li>
+          <li class="nav-item">
+            <a href="/petugasMasuk" class="nav-link">
+             <i class="fa fa-users"></i>
+              <p>Petugas Masuk</p>
             </a>
           </li>
           
           <li class="nav-item">
-            <a href="#" class="nav-link">
-             <i class="fa fa-id-card"></i>
-              <p>Dashboard</p>
+            <a href="/petugasRuang" class="nav-link">
+              <i class="fa fa-users"></i>
+              <p>Petugas Ruang</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/petugasKeluar" class="nav-link">
+             <i class="fa fa-users"></i>
+              <p>Petugas Keluar</p>
             </a>
           </li>
           
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fa fa-cube"></i>
-              <p>Dashboard</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>Dashboard</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fa fa-flag"></i>
-              <p>Dashboard</p>
-            </a>
-          </li>
           <br><br>
           <li class="nav-item">
             <a href="/logout" class="nav-link">
-              <i class="fa fa-sign"></i>
+              <i class="fa fa-reply"></i>
               <p>Logout</p>
             </a>
           </li>

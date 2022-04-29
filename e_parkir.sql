@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 13 Apr 2022 pada 04.39
+-- Waktu pembuatan: 24 Apr 2022 pada 11.50
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 8.0.13
 
@@ -33,6 +33,13 @@ CREATE TABLE `akun` (
   `id_mall` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data untuk tabel `akun`
+--
+
+INSERT INTO `akun` (`nama`, `id_role`, `id_mall`) VALUES
+('afif zakaria', NULL, 7);
+
 -- --------------------------------------------------------
 
 --
@@ -42,7 +49,7 @@ CREATE TABLE `akun` (
 CREATE TABLE `detail_parkir` (
   `id` int(11) NOT NULL,
   `stnk` varchar(25) NOT NULL,
-  `tempat_parkir` int(11) NOT NULL,
+  `tempat_parkir` int(11) DEFAULT NULL,
   `masuk` datetime NOT NULL DEFAULT current_timestamp(),
   `keluar` datetime DEFAULT current_timestamp(),
   `harga` int(11) DEFAULT 0
@@ -53,7 +60,11 @@ CREATE TABLE `detail_parkir` (
 --
 
 INSERT INTO `detail_parkir` (`id`, `stnk`, `tempat_parkir`, `masuk`, `keluar`, `harga`) VALUES
-(1, 'L bo 123', 1, '2022-04-12 13:50:11', NULL, 0);
+(29, 'L 3832 EU', 11, '2022-04-22 15:45:26', NULL, 0),
+(30, 'L 1227 LU', 10, '2022-04-22 15:45:39', NULL, 0),
+(31, 'N 4421 BU', 1, '2022-04-22 15:45:56', NULL, 0),
+(32, 'L 4043 NO', NULL, '2022-04-23 05:32:37', NULL, 0),
+(33, 'B 1122 LO', NULL, '2022-04-23 05:32:46', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -86,7 +97,40 @@ CREATE TABLE `kendaraan` (
 --
 
 INSERT INTO `kendaraan` (`stnk`) VALUES
-('L bo 123');
+(''),
+('1111'),
+('11111'),
+('B 101 NO'),
+('B 1122 LO'),
+('K 88192 LO'),
+('kontol'),
+('L 1212 BO'),
+('L 1227 BO'),
+('L 1227 LU'),
+('L 12333'),
+('L 1234 BO'),
+('L 1443 NO'),
+('L 1927'),
+('L 1927 BO'),
+('L 2223 BO'),
+('L 2233 BO'),
+('L 2345 BO'),
+('L 2392 BO'),
+('L 3832 EU'),
+('L 4043 NO'),
+('L 9998 BO'),
+('L bO fd'),
+('L BOBOBO'),
+('L iksan BO'),
+('l testing 123'),
+('L1234 BO'),
+('L2220p'),
+('N 1233 LO'),
+('N 1822 BI'),
+('N 20201 LO'),
+('N 4421 BU'),
+('N BO'),
+('testing');
 
 -- --------------------------------------------------------
 
@@ -104,7 +148,16 @@ CREATE TABLE `mall` (
 --
 
 INSERT INTO `mall` (`id`, `nama`) VALUES
-(6, 'ROYAL');
+(1, 'TP'),
+(2, 'TP'),
+(3, 'TP'),
+(4, 'TP'),
+(5, 'TP'),
+(6, 'TP'),
+(7, 'TP'),
+(8, 'TP'),
+(9, 'TP'),
+(10, 'TP');
 
 -- --------------------------------------------------------
 
@@ -146,7 +199,16 @@ CREATE TABLE `parkiran` (
 --
 
 INSERT INTO `parkiran` (`id`, `nama`, `id_mall`) VALUES
-(4, 'Blok a', 6);
+(1, 'TP1\r\n', 1),
+(2, 'TP1', 2),
+(3, 'TP1', 3),
+(4, 'TP1', 4),
+(5, 'TP1', 5),
+(6, 'TP1', 6),
+(7, 'TP1', 7),
+(8, 'TP1', 8),
+(9, 'TP1', 9),
+(10, 'TP1', 10);
 
 -- --------------------------------------------------------
 
@@ -207,7 +269,16 @@ CREATE TABLE `tempat_parkir` (
 --
 
 INSERT INTO `tempat_parkir` (`id`, `nama`, `id_parkiran`, `kondisi`) VALUES
-(1, '1', 4, 0);
+(1, 'parkiran TP', 1, 1),
+(2, 'parkiran ROYAL', 2, 0),
+(4, 'Parkiran PTC', 3, 0),
+(9, 'lambo', 4, 0),
+(10, 'Parkiran', 5, 1),
+(11, 'parkir', 6, 1),
+(12, 'laborgini', 7, 0),
+(13, 'ferrari', 8, 0),
+(15, 'honda', 9, 0),
+(16, 'jazz', 10, 0);
 
 -- --------------------------------------------------------
 
@@ -232,9 +303,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `level`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(3, 'iksan arifki', 'admin', 'admin123', NULL, '$2y$10$DuWXT64jA4a./t5K2R8jPunkFGF6Ksp5Di.pZnL/.WLe3/rOpZysO', NULL, '2022-04-09 00:57:31', '2022-04-09 00:57:31'),
-(4, 'muklis', 'petugas Keluar', 'petugasKeluar123', NULL, '$2y$10$vE8GyFK.aMxyGm5pl4C1YO/QoT2hNPBZQn4YQaXWI1x.SXxDRQApi', NULL, '2022-04-10 02:46:28', '2022-04-10 03:22:29'),
-(5, 'Afif zakaria', 'petugas Masuk', 'petugasMasuk123', NULL, '$2y$10$jxDZHKtgO/8IjvOgnJQlbeX2A59G2hBy5Llbk78AnUModMToYdVhi', NULL, '2022-04-10 03:25:42', '2022-04-10 03:25:42');
+(6, 'iksan', 'admin', 'admin123', NULL, '$2y$10$m/1ZP20SCODtF3/EGj7v8Og.xVMacF5BQDMR9THwNPsbjCF9kYcwa', NULL, '2022-04-22 08:08:34', '2022-04-22 08:08:34'),
+(7, 'afif gans', 'petugasM', 'petugasMasuk123', NULL, '$2y$10$0.hQLzA6Mj79d8YhHB0bG.O3AMmN8nUDMmYGhdp4F8/a9yRYA16GS', NULL, '2022-04-22 08:11:28', '2022-04-22 08:11:28'),
+(8, 'muklis', 'petugasK', 'petugasKeluar123', NULL, '$2y$10$6aUo3qQTjnGZy/HZaKMk7ekqNhiKxEgKypBl3O3yNXAH.XGPsYJZi', NULL, '2022-04-22 21:50:42', '2022-04-22 21:50:42'),
+(9, 'supri', 'petugasR', 'petugasRuang123', NULL, '$2y$10$PubGGsE0Ts2ikoEBXpAXv.WxspQC4YJ6RV1tq5U0mWgK9fT8LaZ.2', NULL, '2022-04-22 21:53:02', '2022-04-22 21:53:02');
 
 --
 -- Indexes for dumped tables
@@ -329,7 +401,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `detail_parkir`
 --
 ALTER TABLE `detail_parkir`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT untuk tabel `failed_jobs`
@@ -341,7 +413,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT untuk tabel `mall`
 --
 ALTER TABLE `mall`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT untuk tabel `migrations`
@@ -353,7 +425,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT untuk tabel `parkiran`
 --
 ALTER TABLE `parkiran`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT untuk tabel `personal_access_tokens`
@@ -371,13 +443,13 @@ ALTER TABLE `role`
 -- AUTO_INCREMENT untuk tabel `tempat_parkir`
 --
 ALTER TABLE `tempat_parkir`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

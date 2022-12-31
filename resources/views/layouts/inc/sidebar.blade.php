@@ -42,7 +42,7 @@
             </a>
           </li>
           
-          <br><br>
+          <br><br><br> <br><br><br> <br><br><br>
           <li class="nav-item">
             <a href="/logout" class="nav-link">
               <i class="fa fa-reply"></i>

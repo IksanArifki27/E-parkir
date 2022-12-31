@@ -5,11 +5,14 @@
 @endsection
 
 @section('content-main')
-       <div class="card">
+       <div class="card ">
           <br>
-     <h3><a href="{{URL('laporanP/tambah')}}"> tambah + </a></h3> 
+          <div>
+             <a href="{{URL('laporanP/tambah')}}" class="btn btn-primary mx-2"> tambah ➕</a>
+
+          </div>
                    
-<center><h3 class="text-primary mb-3"><b> Daftar Kendaraan Parkir </b></h3></center>
+<h3 class="text-primary mb-3 mx-auto text-bold"><b> Daftar Kendaraan Parkir </b></h3>
 <table class="table table-bordered table-hover" align="center">
    <thead class="table-dark">
       <tr>
@@ -29,15 +32,11 @@
 <tr>
 <td>{{$no++}}</td>
 <td>{{$dataP->stnk}}</td>
-{{-- <td>{{$dataP->kondisi}}</td> --}}
+
 <td>{{$dataP->mall}}</td>
 <td>{{$dataP->jenis_parkir}}</td>
 <td>{{$dataP->masuk}}</td>
- {{-- <td>{{$dataP->keluar}} -</td> --}}
-    {{-- <td>
-  <a href="/laporanP/delete/{{$dataP->id}}" onclick="return confirm('Admin Yakin ingin menghapusnya?');"><button class="btn btn-danger">Hapus</button></a>
-  <a href="/user/edit/{{$dataP->id}}"><button class="btn btn-warning">Edit</button></a>
-     </td>  --}}
+
                        
 </tr>
 @endforeach
